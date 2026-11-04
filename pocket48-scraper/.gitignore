@@ -1,0 +1,8 @@
+node_modules/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+*.log
+
+# 登录 token（含手机号，绝不入库）
+data/token.json

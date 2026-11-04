@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李婷 · 虚拟偶像对话</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- 左侧边栏：品牌 + 会话列表 -->
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-badge">婷</div>
+      <div class="brand-text">
+        <h1>李婷</h1>
+        <p>SNH48 Team SII · 听这个听听呀</p>
+      </div>
+    </div>
+
+    <!-- 多成员预留：当前仅李婷，后续在此注册新成员 -->
+    <div class="member-select" hidden>
+      <label for="member-select">成员</label>
+      <select id="member-select"></select>
+    </div>
+
+    <button id="new-chat" class="btn-primary">新会话</button>
+
+    <div class="conv-list" id="conv-list">
+      <div class="conv-empty">还没有聊天记录<br>点"新会话"开始吧</div>
+    </div>
+
+    <div class="sidebar-foot">AIXOX48 · 阶段 B</div>
+  </aside>
+
+  <!-- 主区：聊天 -->
+  <main id="chat-area">
+    <header id="chat-header">
+      <button id="menu-btn" class="menu-btn" aria-label="会话列表">☰</button>
+      <span id="chat-title">新会话</span>
+      <span id="chat-status"></span>
+    </header>
+
+    <div id="messages">
+      <div class="welcome">
+        <div class="welcome-badge">婷</div>
+        <p>嗨，我是李婷～<br>在这里和我聊天吧，我会记得你说过的话。</p>
+      </div>
+    </div>
+
+    <div id="typing" class="typing" hidden>
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="typing-text">李婷正在输入…</span>
+    </div>
+
+    <footer id="input-bar">
+      <textarea id="input" rows="1" placeholder="和听听聊聊吧…（Enter 发送）"></textarea>
+      <button id="send" class="btn-send">发送</button>
+    </footer>
+  </main>
+
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
